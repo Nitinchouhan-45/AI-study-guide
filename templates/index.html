@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Study Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Study Assistant</h1>
+        <p class="subtitle">Enter any topic and get a simple explanation + quiz questions.</p>
+        <form action="/study" method="POST">
+            <input type="text" name="topic" placeholder="e.g. Photosynthesis, calculas, Newton's Laws..." required>
+            <button type="submit">Study Now</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Study Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Study Result</h1>
+        <div class="response-box">
+            {{ response | safe }}
+        </div>
+        <a href="/">← Study another topic</a>
+    </div>
+</body>
+</html>
