@@ -1,3 +1,4 @@
+# libraries used in this project
 from google import genai
 from flask import Flask, render_template, request
 import dotenv as dotenv
@@ -5,12 +6,13 @@ import os
 import markdown
 app = Flask(__name__)
 dotenv.load_dotenv()
-
+# API key 
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-
+# route for the page where users can input the topic they want to study
 @app.route("/search")
 def search():
     return render_template("index.html")
+#route for the page where the response from the Gemini API will be displayed
 @app.route("/study", methods=["POST"])
 def study():
     topic = request.form.get("topic")
