@@ -9,8 +9,8 @@ dotenv.load_dotenv()
 # API key 
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 # route for the page where users can input the topic they want to study
-@app.route("/search")
-def search():
+@app.route("/Topic")
+def Topic():
     return render_template("index.html")
 #route for the page where the response from the Gemini API will be displayed
 @app.route("/study", methods=["POST"])
